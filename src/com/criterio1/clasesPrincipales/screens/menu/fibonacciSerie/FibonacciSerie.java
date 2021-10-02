@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.criterio1.ejemplomenu.screens.menu.fibonacciSerie;
+package com.criterio1.clasesPrincipales.screens.menu.fibonacciSerie;
 
-import com.criterio1.ejemplomenu.SerieFibonacci;
-import com.criterio1.ejemplomenu.screens.sistemaEcuaciones.SistemaEcuaciones;
+import com.criterio1.clasesPrincipales.SerieFibonacci;
+import com.criterio1.clasesPrincipales.screens.sistemaEcuaciones.SistemaEcuaciones;
 import java.awt.Color;
 import javax.swing.JTextField;
 
@@ -34,16 +34,32 @@ public class FibonacciSerie extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        kk = new java.awt.ScrollPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        mostrarSerie = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         numFi = new javax.swing.JTextField();
         calcF = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         cleanFibonacci = new javax.swing.JButton();
-        kk = new java.awt.ScrollPane();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        mostrarSerie = new javax.swing.JTextArea();
 
         setBackground(new java.awt.Color(255, 255, 255));
+
+        kk.setForeground(new java.awt.Color(255, 0, 0));
+
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(165, 0, 86)));
+        jScrollPane1.setRowHeaderView(null);
+
+        mostrarSerie.setEditable(false);
+        mostrarSerie.setColumns(20);
+        mostrarSerie.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        mostrarSerie.setLineWrap(true);
+        mostrarSerie.setRows(3);
+        mostrarSerie.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(245, 0, 86)));
+        mostrarSerie.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jScrollPane1.setViewportView(mostrarSerie);
+
+        kk.add(jScrollPane1);
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
@@ -94,7 +110,7 @@ public class FibonacciSerie extends javax.swing.JPanel {
 
         cleanFibonacci.setBackground(new java.awt.Color(255, 255, 255));
         cleanFibonacci.setForeground(new java.awt.Color(0, 0, 0));
-        cleanFibonacci.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/ejemplomenu/screens/menu/fibonacciSerie/escobita.png"))); // NOI18N
+        cleanFibonacci.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/clasesPrincipales/screens/menu/fibonacciSerie/escobita.png"))); // NOI18N
         cleanFibonacci.setBorderPainted(false);
         cleanFibonacci.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cleanFibonacci.setFocusable(false);
@@ -112,22 +128,6 @@ public class FibonacciSerie extends javax.swing.JPanel {
                 cleanFibonacciActionPerformed(evt);
             }
         });
-
-        kk.setForeground(new java.awt.Color(255, 0, 0));
-
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(165, 0, 86)));
-        jScrollPane1.setRowHeaderView(null);
-
-        mostrarSerie.setEditable(false);
-        mostrarSerie.setColumns(20);
-        mostrarSerie.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
-        mostrarSerie.setLineWrap(true);
-        mostrarSerie.setRows(3);
-        mostrarSerie.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(245, 0, 86)));
-        mostrarSerie.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jScrollPane1.setViewportView(mostrarSerie);
-
-        kk.add(jScrollPane1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

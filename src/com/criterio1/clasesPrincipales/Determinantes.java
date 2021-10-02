@@ -1,7 +1,7 @@
 
-package com.criterio1.ejemplomenu;
+package com.criterio1.clasesPrincipales;
 
-import com.criterio1.ejemplomenu.screens.sistemaEcuaciones.ResultadoEcuaciones;
+import com.criterio1.clasesPrincipales.screens.sistemaEcuaciones.ResultadoEcuaciones;
 
 
 

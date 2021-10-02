@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.criterio1.ejemplomenu.screens.sistemaEcuaciones;
+package com.criterio1.clasesPrincipales.screens.sistemaEcuaciones;
 
-import com.criterio1.ejemplomenu.Determinantes;
+import com.criterio1.clasesPrincipales.Determinantes;
 import java.awt.Color;
 import java.awt.Image;
 import javax.swing.Icon;
@@ -296,7 +296,7 @@ public class SistemaEcuaciones extends javax.swing.JPanel {
         bVolverME2.setBackground(new java.awt.Color(255, 255, 255));
         bVolverME2.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
         bVolverME2.setForeground(new java.awt.Color(0, 0, 0));
-        bVolverME2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/ejemplomenu/screens/sistemaEcuaciones/escobita.png"))); // NOI18N
+        bVolverME2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/clasesPrincipales/screens/sistemaEcuaciones/escobita.png"))); // NOI18N
         bVolverME2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
         bVolverME2.setBorderPainted(false);
         bVolverME2.setContentAreaFilled(false);

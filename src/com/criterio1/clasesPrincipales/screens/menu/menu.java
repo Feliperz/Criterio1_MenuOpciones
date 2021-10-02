@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.criterio1.ejemplomenu.screens.menu;
+package com.criterio1.clasesPrincipales.screens.menu;
 
-import com.criterio1.ejemplomenu.screens.menu.fibonacciSerie.FibonacciSerie;
-import com.criterio1.ejemplomenu.screens.menu.tipoRaices.TipoDeRaiz;
+import com.criterio1.clasesPrincipales.screens.menu.fibonacciSerie.FibonacciSerie;
+import com.criterio1.clasesPrincipales.screens.menu.tipoRaices.TipoDeRaiz;
 
-import com.criterio1.ejemplomenu.screens.sistemaEcuaciones.SistemaEcuaciones;
+import com.criterio1.clasesPrincipales.screens.sistemaEcuaciones.SistemaEcuaciones;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -69,7 +69,7 @@ public class menu extends javax.swing.JFrame implements ActionListener {
         jLabel1 = new javax.swing.JLabel();
         JLabel_Logo = new javax.swing.JLabel();
         sEc = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        profe = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -103,7 +103,7 @@ public class menu extends javax.swing.JFrame implements ActionListener {
         volverPresentacion.setBackground(new java.awt.Color(204, 0, 102));
         volverPresentacion.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         volverPresentacion.setForeground(new java.awt.Color(255, 255, 255));
-        volverPresentacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/ejemplomenu/screens/menu/Menu.png"))); // NOI18N
+        volverPresentacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/clasesPrincipales/screens/menu/Menu.png"))); // NOI18N
         volverPresentacion.setText("Volver Menu     ");
         volverPresentacion.setBorder(null);
         volverPresentacion.setBorderPainted(false);
@@ -127,7 +127,7 @@ public class menu extends javax.swing.JFrame implements ActionListener {
         chooseDeterminante1.setBackground(new java.awt.Color(204, 0, 102));
         chooseDeterminante1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         chooseDeterminante1.setForeground(new java.awt.Color(255, 255, 255));
-        chooseDeterminante1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/ejemplomenu/screens/menu/Determinante.png"))); // NOI18N
+        chooseDeterminante1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/clasesPrincipales/screens/menu/Determinante.png"))); // NOI18N
         chooseDeterminante1.setText("Determinante   ");
         chooseDeterminante1.setBorder(null);
         chooseDeterminante1.setBorderPainted(false);
@@ -153,7 +153,7 @@ public class menu extends javax.swing.JFrame implements ActionListener {
         chooseFibonachi1.setBackground(new java.awt.Color(204, 0, 102));
         chooseFibonachi1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         chooseFibonachi1.setForeground(new java.awt.Color(255, 255, 255));
-        chooseFibonachi1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/ejemplomenu/screens/menu/Fibonacci.png"))); // NOI18N
+        chooseFibonachi1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/clasesPrincipales/screens/menu/Fibonacci.png"))); // NOI18N
         chooseFibonachi1.setText("Fibonacci Serie");
         chooseFibonachi1.setBorder(null);
         chooseFibonachi1.setBorderPainted(false);
@@ -179,7 +179,7 @@ public class menu extends javax.swing.JFrame implements ActionListener {
         chooseRaices1.setBackground(new java.awt.Color(204, 0, 102));
         chooseRaices1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         chooseRaices1.setForeground(new java.awt.Color(255, 255, 255));
-        chooseRaices1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/ejemplomenu/screens/menu/Raices.png"))); // NOI18N
+        chooseRaices1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/clasesPrincipales/screens/menu/Raices.png"))); // NOI18N
         chooseRaices1.setText("Discriminante   ");
         chooseRaices1.setBorder(null);
         chooseRaices1.setBorderPainted(false);
@@ -261,24 +261,26 @@ public class menu extends javax.swing.JFrame implements ActionListener {
 
         sEc.setBackground(new java.awt.Color(255, 255, 255));
 
+        profe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/clasesPrincipales/screens/menu/PROFE.png"))); // NOI18N
+
         javax.swing.GroupLayout sEcLayout = new javax.swing.GroupLayout(sEc);
         sEc.setLayout(sEcLayout);
         sEcLayout.setHorizontalGroup(
             sEcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sEcLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sEcLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(profe, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         sEcLayout.setVerticalGroup(
             sEcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sEcLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sEcLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(profe, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
-        jPanel4.add(sEc, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 600, 330));
+        jPanel4.add(sEc, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 600, 330));
 
         jPanel5.setBackground(new java.awt.Color(64, 64, 64));
 
@@ -291,7 +293,7 @@ public class menu extends javax.swing.JFrame implements ActionListener {
         jLabel3.setText("Interfaz Usuario");
 
         Logo_tec_tepic.setForeground(new java.awt.Color(0, 0, 0));
-        Logo_tec_tepic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/ejemplomenu/screens/menu/Logo_Tec_Tepic.png"))); // NOI18N
+        Logo_tec_tepic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/clasesPrincipales/screens/menu/Logo_Tec_Tepic.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -450,13 +452,13 @@ public class menu extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JLabel panel_Exit;
+    private javax.swing.JLabel profe;
     private javax.swing.JPanel sEc;
     private javax.swing.JButton volverPresentacion;
     // End of variables declaration//GEN-END:variables
@@ -467,7 +469,7 @@ public class menu extends javax.swing.JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == chooseDeterminante1) {
-               
+               profe.setVisible(false);
                sis.cleanComponents();
                sis.setBounds(0,0,699,699);
                sEc.add(sis);
@@ -481,7 +483,7 @@ public class menu extends javax.swing.JFrame implements ActionListener {
              
         } else if (e.getSource() == chooseRaices1) {
             raiz.cleanValues();
-            this.sEc.setBackground(Color.blue);
+            profe.setVisible(false);
             raiz.setBounds(0,0,699,699);
                sEc.add(raiz);
                validate();
@@ -491,6 +493,7 @@ public class menu extends javax.swing.JFrame implements ActionListener {
              fibonacci.setVisible(false);
              
         } else if (e.getSource() == chooseFibonachi1) {
+             profe.setVisible(false);
                fibonacci.Clean();
                fibonacci.setBounds(0,0,699,699);
                sEc.add(fibonacci);

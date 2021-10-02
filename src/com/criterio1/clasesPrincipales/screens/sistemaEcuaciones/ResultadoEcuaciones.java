@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.criterio1.ejemplomenu.screens.sistemaEcuaciones;
+package com.criterio1.clasesPrincipales.screens.sistemaEcuaciones;
 
 import java.awt.Color;
 
@@ -1001,7 +1001,7 @@ private int xMouse, yMouse;
             }
         });
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/ejemplomenu/screens/sistemaEcuaciones/Logo_Tec_Tepic.png"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/clasesPrincipales/screens/sistemaEcuaciones/Logo_Tec_Tepic.png"))); // NOI18N
         jLabel17.setText("jLabel17");
 
         jLabel18.setFont(new java.awt.Font("Roboto", 1, 29)); // NOI18N

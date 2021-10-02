@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.criterio1.ejemplomenu.screens.menu.tipoRaices;
+package com.criterio1.clasesPrincipales.screens.menu.tipoRaices;
 
-import com.criterio1.ejemplomenu.TipoDeRaices;
+import com.criterio1.clasesPrincipales.TipoDeRaices;
 import java.awt.Color;
 import javax.swing.JTextField;
 
@@ -172,7 +172,7 @@ public class TipoDeRaiz extends javax.swing.JPanel {
 
         botonClean.setBackground(new java.awt.Color(255, 255, 255));
         botonClean.setForeground(new java.awt.Color(0, 0, 0));
-        botonClean.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/ejemplomenu/screens/menu/tipoRaices/escobita.png"))); // NOI18N
+        botonClean.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/clasesPrincipales/screens/menu/tipoRaices/escobita.png"))); // NOI18N
         botonClean.setBorderPainted(false);
         botonClean.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botonClean.setFocusable(false);
