@@ -72,7 +72,6 @@ public class menuPresentacion extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         Background_Rojo = new javax.swing.JPanel();
         Panel_Exit = new javax.swing.JPanel();
         Boton_Exit = new javax.swing.JLabel();
@@ -152,11 +151,6 @@ public class menuPresentacion extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("19401091");
 
-        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("Roboto Medium", 0, 11)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("18400276");
-
         javax.swing.GroupLayout Background_BlancoLayout = new javax.swing.GroupLayout(Background_Blanco);
         Background_Blanco.setLayout(Background_BlancoLayout);
         Background_BlancoLayout.setHorizontalGroup(
@@ -173,8 +167,7 @@ public class menuPresentacion extends javax.swing.JFrame {
                                 .addGap(12, 12, 12)
                                 .addGroup(Background_BlancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel5)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel6)))))
+                                    .addComponent(jLabel4)))))
                     .addGroup(Background_BlancoLayout.createSequentialGroup()
                         .addGap(59, 59, 59)
                         .addComponent(Label_txt))
@@ -198,9 +191,7 @@ public class menuPresentacion extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
                 .addComponent(Logo_tec_tepic, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
@@ -369,6 +360,5 @@ public class menuPresentacion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }

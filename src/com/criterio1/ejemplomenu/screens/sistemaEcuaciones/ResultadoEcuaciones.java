@@ -5,11 +5,14 @@
  */
 package com.criterio1.ejemplomenu.screens.sistemaEcuaciones;
 
+import java.awt.Color;
+
 
 public class ResultadoEcuaciones extends javax.swing.JFrame {
 
 SistemaEcuaciones ecuaciones = new SistemaEcuaciones();
 private String matriz[][] = new String[4][4];
+private int xMouse, yMouse;
     public ResultadoEcuaciones() {
         initComponents();
         
@@ -21,6 +24,8 @@ private String matriz[][] = new String[4][4];
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel6 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
         PanelDeterminantePrincipal = new javax.swing.JPanel();
         dPrincipalx1 = new javax.swing.JLabel();
         dPrincipaly3 = new javax.swing.JLabel();
@@ -89,6 +94,7 @@ private String matriz[][] = new String[4][4];
         suma2Z = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         ResultadoDetZ = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -113,42 +119,98 @@ private String matriz[][] = new String[4][4];
         resultadoDetPrincipal4 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         valDeZ = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jPanel7 = new javax.swing.JPanel();
+        botonVolver = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
+        setUndecorated(true);
 
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jPanel6MouseDragged(evt);
+            }
+        });
+        jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel6MousePressed(evt);
+            }
+        });
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+
+        PanelDeterminantePrincipal.setBackground(new java.awt.Color(255, 255, 255));
+
+        dPrincipalx1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        dPrincipalx1.setForeground(new java.awt.Color(0, 0, 0));
         dPrincipalx1.setText("2");
         dPrincipalx1.setName(""); // NOI18N
 
+        dPrincipaly3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        dPrincipaly3.setForeground(new java.awt.Color(0, 0, 0));
         dPrincipaly3.setText("3");
 
+        dPrincipalz1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        dPrincipalz1.setForeground(new java.awt.Color(0, 0, 0));
         dPrincipalz1.setText("5");
 
+        jLabel1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("|A| = ");
 
+        dPrincipalz2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        dPrincipalz2.setForeground(new java.awt.Color(0, 0, 0));
         dPrincipalz2.setText("6");
 
+        dPrincipalz3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        dPrincipalz3.setForeground(new java.awt.Color(0, 0, 0));
         dPrincipalz3.setText("6");
 
+        dPrincipalx2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        dPrincipalx2.setForeground(new java.awt.Color(0, 0, 0));
         dPrincipalx2.setText("4");
 
+        dPrincipalx3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        dPrincipalx3.setForeground(new java.awt.Color(0, 0, 0));
         dPrincipalx3.setText("4");
 
+        dPrincipaly1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        dPrincipaly1.setForeground(new java.awt.Color(0, 0, 0));
         dPrincipaly1.setText("4");
 
+        dPrincipaly2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        dPrincipaly2.setForeground(new java.awt.Color(0, 0, 0));
         dPrincipaly2.setText("3");
 
+        jLabel41.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(0, 0, 0));
         jLabel41.setText("=");
 
+        suma1Principal.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        suma1Principal.setForeground(new java.awt.Color(0, 0, 0));
         suma1Principal.setText("1");
 
+        jLabel5.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("-");
 
+        suma2Principal.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        suma2Principal.setForeground(new java.awt.Color(0, 0, 0));
         suma2Principal.setText("2");
 
+        jLabel6.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("=");
 
+        resultadoDetPrincipal.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        resultadoDetPrincipal.setForeground(new java.awt.Color(0, 0, 0));
         resultadoDetPrincipal.setText("1");
 
         javax.swing.GroupLayout PanelDeterminantePrincipalLayout = new javax.swing.GroupLayout(PanelDeterminantePrincipal);
@@ -221,36 +283,70 @@ private String matriz[][] = new String[4][4];
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
+        PanelDeterminanteDeX.setBackground(new java.awt.Color(255, 255, 255));
+
+        matrizDeX_x1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeX_x1.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeX_x1.setText("2");
 
+        matrizDeX_y3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeX_y3.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeX_y3.setText("3");
 
+        matrizDeX_z1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeX_z1.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeX_z1.setText("5");
 
+        jLabel14.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("|Ax| = ");
 
+        matrizDeX_z2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeX_z2.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeX_z2.setText("6");
 
+        matrizDeX_z3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeX_z3.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeX_z3.setText("6");
 
+        matrizDeX_x2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeX_x2.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeX_x2.setText("4");
 
+        matrizDeX_x3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeX_x3.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeX_x3.setText("4");
 
+        matrizDeX_y1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeX_y1.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeX_y1.setText("4");
 
+        matrizDeX_y2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeX_y2.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeX_y2.setText("3");
 
+        jLabel2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("=");
 
+        suma1X.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        suma1X.setForeground(new java.awt.Color(0, 0, 0));
         suma1X.setText("1");
 
+        jLabel7.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("-");
 
+        suma2X.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        suma2X.setForeground(new java.awt.Color(0, 0, 0));
         suma2X.setText("2");
 
+        jLabel8.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("=");
 
+        resultadoDetX.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        resultadoDetX.setForeground(new java.awt.Color(0, 0, 0));
         resultadoDetX.setText("1");
 
         javax.swing.GroupLayout PanelDeterminanteDeXLayout = new javax.swing.GroupLayout(PanelDeterminanteDeX);
@@ -326,36 +422,70 @@ private String matriz[][] = new String[4][4];
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
+        PanelDeterminanteDeY.setBackground(new java.awt.Color(255, 255, 255));
+
+        matrizDeY_x1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeY_x1.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeY_x1.setText("2");
 
+        matrizDeY_y3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeY_y3.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeY_y3.setText("3");
 
+        matrizDeY_z1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeY_z1.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeY_z1.setText("5");
 
+        jLabel24.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
         jLabel24.setText("|Ay| = ");
 
+        matrizDeY_z2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeY_z2.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeY_z2.setText("6");
 
+        matrizDeY_z3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeY_z3.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeY_z3.setText("6");
 
+        matrizDeY_x2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeY_x2.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeY_x2.setText("4");
 
+        matrizDeY_x3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeY_x3.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeY_x3.setText("4");
 
+        matrizDeY_y1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeY_y1.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeY_y1.setText("4");
 
+        matrizDeY_y2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeY_y2.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeY_y2.setText("3");
 
+        jLabel3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("=");
 
+        suma1Y.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        suma1Y.setForeground(new java.awt.Color(0, 0, 0));
         suma1Y.setText("1");
 
+        jLabel10.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("-");
 
+        suma2Y.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        suma2Y.setForeground(new java.awt.Color(0, 0, 0));
         suma2Y.setText("2");
 
+        jLabel9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("=");
 
+        resultadoDetY.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        resultadoDetY.setForeground(new java.awt.Color(0, 0, 0));
         resultadoDetY.setText("1");
 
         javax.swing.GroupLayout PanelDeterminanteDeYLayout = new javax.swing.GroupLayout(PanelDeterminanteDeY);
@@ -372,8 +502,7 @@ private String matriz[][] = new String[4][4];
                         .addGap(18, 18, 18)
                         .addComponent(matrizDeY_y2)
                         .addGap(18, 18, 18)
-                        .addComponent(matrizDeY_z2)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(matrizDeY_z2))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelDeterminanteDeYLayout.createSequentialGroup()
                         .addComponent(matrizDeY_x1)
                         .addGap(18, 18, 18)
@@ -386,7 +515,7 @@ private String matriz[][] = new String[4][4];
                         .addComponent(matrizDeY_y3)
                         .addGap(18, 18, 18)
                         .addComponent(matrizDeY_z3)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(0, 12, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(suma1Y)
@@ -428,36 +557,70 @@ private String matriz[][] = new String[4][4];
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
+        PanelDeterminanteDeZ.setBackground(new java.awt.Color(255, 255, 255));
+
+        matrizDeZ_x1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeZ_x1.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeZ_x1.setText("2");
 
+        matrizDeZ_y3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeZ_y3.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeZ_y3.setText("3");
 
+        matrizDeZ_z1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeZ_z1.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeZ_z1.setText("5");
 
+        jLabel34.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(0, 0, 0));
         jLabel34.setText("|Az| = ");
 
+        matrizDeZ_z2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeZ_z2.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeZ_z2.setText("6");
 
+        matrizDeZ_z3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeZ_z3.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeZ_z3.setText("6");
 
+        matrizDeZ_x2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeZ_x2.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeZ_x2.setText("4");
 
+        matrizDeZ_x3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeZ_x3.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeZ_x3.setText("4");
 
+        matrizDeZ_y1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeZ_y1.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeZ_y1.setText("4");
 
+        matrizDeZ_y2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        matrizDeZ_y2.setForeground(new java.awt.Color(0, 0, 0));
         matrizDeZ_y2.setText("3");
 
+        jLabel4.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("=");
 
+        suma1Z.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        suma1Z.setForeground(new java.awt.Color(0, 0, 0));
         suma1Z.setText("1");
 
+        jLabel13.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("-");
 
+        suma2Z.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        suma2Z.setForeground(new java.awt.Color(0, 0, 0));
         suma2Z.setText("2");
 
+        jLabel11.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("=");
 
+        ResultadoDetZ.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        ResultadoDetZ.setForeground(new java.awt.Color(0, 0, 0));
         ResultadoDetZ.setText("1");
 
         javax.swing.GroupLayout PanelDeterminanteDeZLayout = new javax.swing.GroupLayout(PanelDeterminanteDeZ);
@@ -534,18 +697,65 @@ private String matriz[][] = new String[4][4];
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PanelDeterminantePrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(84, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(PanelDeterminanteDeX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelDeterminanteDeY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelDeterminanteDeZ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PanelDeterminantePrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelDeterminanteDeX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelDeterminanteDeY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelDeterminanteDeZ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+
+        jPanel6.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 115, -1, -1));
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel12.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("x = ");
 
+        jLabel15.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("|Ax|/(|A|)");
 
+        jLabel16.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("=");
 
+        resultadoDetXMuestra.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        resultadoDetXMuestra.setForeground(new java.awt.Color(0, 0, 0));
         resultadoDetXMuestra.setText("1");
 
         resultadoDetPrincipal2.setText("1");
 
+        jLabel19.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("=");
 
+        valDeX.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        valDeX.setForeground(new java.awt.Color(0, 0, 0));
         valDeX.setText("1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -592,18 +802,34 @@ private String matriz[][] = new String[4][4];
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel21.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
         jLabel21.setText("y = ");
 
+        jLabel22.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
         jLabel22.setText("|Ay|/(|A|)");
 
+        jLabel23.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(0, 0, 0));
         jLabel23.setText("=");
 
+        resultadoDetYMuestra.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        resultadoDetYMuestra.setForeground(new java.awt.Color(0, 0, 0));
         resultadoDetYMuestra.setText("1");
 
+        resultadoDetPrincipal3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        resultadoDetPrincipal3.setForeground(new java.awt.Color(0, 0, 0));
         resultadoDetPrincipal3.setText("1");
 
+        jLabel27.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(0, 0, 0));
         jLabel27.setText("=");
 
+        valDeY.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        valDeY.setForeground(new java.awt.Color(0, 0, 0));
         valDeY.setText("1");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -650,18 +876,34 @@ private String matriz[][] = new String[4][4];
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel29.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(0, 0, 0));
         jLabel29.setText("z = ");
 
+        jLabel30.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(0, 0, 0));
         jLabel30.setText("|Ay|/(|A|)");
 
+        jLabel31.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(0, 0, 0));
         jLabel31.setText("=");
 
+        resultadoDetZMuestra.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        resultadoDetZMuestra.setForeground(new java.awt.Color(0, 0, 0));
         resultadoDetZMuestra.setText("1");
 
+        resultadoDetPrincipal4.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        resultadoDetPrincipal4.setForeground(new java.awt.Color(0, 0, 0));
         resultadoDetPrincipal4.setText("1");
 
+        jLabel35.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(0, 0, 0));
         jLabel35.setText("=");
 
+        valDeZ.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        valDeZ.setForeground(new java.awt.Color(0, 0, 0));
         valDeZ.setText("1");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -708,68 +950,159 @@ private String matriz[][] = new String[4][4];
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jPanel6.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 540, -1, -1));
+
+        jPanel7.setBackground(new java.awt.Color(66, 66, 66));
+
+        botonVolver.setBackground(new java.awt.Color(66, 66, 66));
+        botonVolver.setFont(new java.awt.Font("Lucida Sans", 1, 28)); // NOI18N
+        botonVolver.setForeground(new java.awt.Color(204, 0, 0));
+        botonVolver.setText("X");
+        botonVolver.setBorderPainted(false);
+        botonVolver.setContentAreaFilled(false);
+        botonVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonVolver.setFocusable(false);
+        botonVolver.setOpaque(true);
+        botonVolver.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                botonVolverMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botonVolverMouseExited(evt);
             }
         });
+        botonVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVolverActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/ejemplomenu/screens/sistemaEcuaciones/Logo_Tec_Tepic.png"))); // NOI18N
+        jLabel17.setText("jLabel17");
+
+        jLabel18.setFont(new java.awt.Font("Roboto", 1, 29)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("RESULTADOS");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(234, 234, 234)
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 283, Short.MAX_VALUE)
+                .addComponent(botonVolver)
+                .addGap(22, 22, 22))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel18)
+                    .addComponent(botonVolver))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel6.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 890, 70));
+
+        jPanel8.setBackground(new java.awt.Color(170, 0, 85));
+
+        jPanel9.setBackground(new java.awt.Color(66, 66, 66));
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 890, Short.MAX_VALUE)
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 9, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanel6.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 660, 890, 70));
+        jPanel6.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(PanelDeterminanteDeY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 326, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addGap(243, 243, 243))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(PanelDeterminanteDeZ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(PanelDeterminanteDeX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(PanelDeterminantePrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(110, 110, 110))
+            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 883, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(PanelDeterminantePrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PanelDeterminanteDeX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PanelDeterminanteDeY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addComponent(PanelDeterminanteDeZ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(176, Short.MAX_VALUE))
+            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
         this.dispose();
        ecuaciones.cleanComponents();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_botonVolverActionPerformed
+
+    private void jPanel6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MousePressed
+         xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_jPanel6MousePressed
+
+    private void jPanel6MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseDragged
+         int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xMouse, y - yMouse);
+    }//GEN-LAST:event_jPanel6MouseDragged
+
+    private void botonVolverMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVolverMouseEntered
+         botonVolver.setBackground(new Color(50,50,50));
+    }//GEN-LAST:event_botonVolverMouseEntered
+
+    private void botonVolverMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVolverMouseExited
+         botonVolver.setBackground(new Color(66,66,66));
+    }//GEN-LAST:event_botonVolverMouseExited
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -809,6 +1142,7 @@ private String matriz[][] = new String[4][4];
     private javax.swing.JPanel PanelDeterminanteDeZ;
     private javax.swing.JPanel PanelDeterminantePrincipal;
     private javax.swing.JLabel ResultadoDetZ;
+    private javax.swing.JButton botonVolver;
     private javax.swing.JLabel dPrincipalx1;
     private javax.swing.JLabel dPrincipalx2;
     private javax.swing.JLabel dPrincipalx3;
@@ -818,7 +1152,6 @@ private String matriz[][] = new String[4][4];
     private javax.swing.JLabel dPrincipalz1;
     private javax.swing.JLabel dPrincipalz2;
     private javax.swing.JLabel dPrincipalz3;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -827,8 +1160,11 @@ private String matriz[][] = new String[4][4];
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -850,6 +1186,12 @@ private String matriz[][] = new String[4][4];
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JLabel matrizDeX_x1;
     private javax.swing.JLabel matrizDeX_x2;
     private javax.swing.JLabel matrizDeX_x3;

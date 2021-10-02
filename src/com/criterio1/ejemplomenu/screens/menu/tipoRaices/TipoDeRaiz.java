@@ -5,6 +5,7 @@
  */
 package com.criterio1.ejemplomenu.screens.menu.tipoRaices;
 
+import com.criterio1.ejemplomenu.TipoDeRaices;
 import java.awt.Color;
 import javax.swing.JTextField;
 
@@ -14,13 +15,13 @@ import javax.swing.JTextField;
  */
 public class TipoDeRaiz extends javax.swing.JPanel {
 
-  private float ArregloCocientes[] = new float[3];
+  private double ArregloCocientes[] = new double[3];
     public TipoDeRaiz() {
         initComponents();
     }
 
    boolean dataIsCorrect = true;
-    public float isCorrectData(JTextField field){
+    public double isCorrectData(JTextField field){
         String data = field.getText();
         if(data.equals("")){
            dataIsCorrect = false;
@@ -28,7 +29,7 @@ public class TipoDeRaiz extends javax.swing.JPanel {
            return 0;
         }
       
-        float dataReturn = Float.parseFloat(data);
+        double dataReturn = Double.valueOf(data);
         return dataReturn;
             
     }
@@ -39,6 +40,7 @@ public class TipoDeRaiz extends javax.swing.JPanel {
         cocienteA.setBackground(Color.white);
         cocienteB.setBackground(Color.white);
         cocienteC.setBackground(Color.white);
+        casoRaiz.setText("");
     }
  
     @SuppressWarnings("unchecked")
@@ -58,11 +60,19 @@ public class TipoDeRaiz extends javax.swing.JPanel {
         cocienteC = new javax.swing.JTextField();
         calButtonRaiz = new javax.swing.JButton();
         botonClean = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        casoRaiz = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("TIPO DE RAICES");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("\"Metodo De Discriminante\"");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -88,9 +98,14 @@ public class TipoDeRaiz extends javax.swing.JPanel {
                 .addGap(0, 11, Short.MAX_VALUE))
         );
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Ingrese Los Coeficientes");
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel4.setFont(new java.awt.Font("Txt_IV50", 0, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("a=");
 
         cocienteA.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -104,6 +119,8 @@ public class TipoDeRaiz extends javax.swing.JPanel {
             }
         });
 
+        jLabel5.setFont(new java.awt.Font("Txt_IV50", 0, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("b=");
 
         cocienteB.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -117,6 +134,8 @@ public class TipoDeRaiz extends javax.swing.JPanel {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Txt_IV50", 0, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("c=");
 
         cocienteC.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -190,14 +209,13 @@ public class TipoDeRaiz extends javax.swing.JPanel {
                         .addGap(35, 35, 35)
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cocienteC)
+                        .addComponent(cocienteC, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 14, Short.MAX_VALUE)
-                        .addComponent(calButtonRaiz, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(calButtonRaiz, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(botonClean, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(228, 228, 228))))
+                        .addGap(213, 213, 213))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -219,6 +237,26 @@ public class TipoDeRaiz extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
+        casoRaiz.setForeground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(casoRaiz)
+                .addGap(0, 81, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(18, Short.MAX_VALUE)
+                .addComponent(casoRaiz)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -232,7 +270,10 @@ public class TipoDeRaiz extends javax.swing.JPanel {
                         .addGap(97, 97, 97)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))))
+                            .addComponent(jLabel3)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(88, 88, 88)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(297, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -244,7 +285,9 @@ public class TipoDeRaiz extends javax.swing.JPanel {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(194, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -252,6 +295,9 @@ public class TipoDeRaiz extends javax.swing.JPanel {
         dataIsCorrect = true;
         agregar();
         if(dataIsCorrect){
+            TipoDeRaices raiz = new TipoDeRaices();
+            raiz.calcularRaices(ArregloCocientes);
+            casoRaiz.setText(raiz.clase);
             
         }
     }//GEN-LAST:event_calButtonRaizActionPerformed
@@ -296,6 +342,7 @@ public class TipoDeRaiz extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonClean;
     private javax.swing.JButton calButtonRaiz;
+    private javax.swing.JLabel casoRaiz;
     private javax.swing.JTextField cocienteA;
     private javax.swing.JTextField cocienteB;
     private javax.swing.JTextField cocienteC;
@@ -307,5 +354,6 @@ public class TipoDeRaiz extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }
