@@ -261,21 +261,22 @@ public class menu extends javax.swing.JFrame implements ActionListener {
 
         sEc.setBackground(new java.awt.Color(255, 255, 255));
 
+        logo_java.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/clasesPrincipales/screens/menu/Java-logo.png"))); // NOI18N
+
         javax.swing.GroupLayout sEcLayout = new javax.swing.GroupLayout(sEc);
         sEc.setLayout(sEcLayout);
         sEcLayout.setHorizontalGroup(
             sEcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sEcLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addContainerGap()
                 .addComponent(logo_java, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(456, Short.MAX_VALUE))
+                .addContainerGap(511, Short.MAX_VALUE))
         );
         sEcLayout.setVerticalGroup(
             sEcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sEcLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
                 .addComponent(logo_java, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(247, Short.MAX_VALUE))
+                .addGap(0, 267, Short.MAX_VALUE))
         );
 
         jPanel4.add(sEc, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 600, 330));
