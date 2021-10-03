@@ -69,7 +69,7 @@ public class menu extends javax.swing.JFrame implements ActionListener {
         jLabel1 = new javax.swing.JLabel();
         JLabel_Logo = new javax.swing.JLabel();
         sEc = new javax.swing.JPanel();
-        profe = new javax.swing.JLabel();
+        logo_java = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -261,23 +261,21 @@ public class menu extends javax.swing.JFrame implements ActionListener {
 
         sEc.setBackground(new java.awt.Color(255, 255, 255));
 
-        profe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/criterio1/clasesPrincipales/screens/menu/PROFE.png"))); // NOI18N
-
         javax.swing.GroupLayout sEcLayout = new javax.swing.GroupLayout(sEc);
         sEc.setLayout(sEcLayout);
         sEcLayout.setHorizontalGroup(
             sEcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sEcLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(profe, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGroup(sEcLayout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addComponent(logo_java, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(456, Short.MAX_VALUE))
         );
         sEcLayout.setVerticalGroup(
             sEcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sEcLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(profe, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGroup(sEcLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(logo_java, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(247, Short.MAX_VALUE))
         );
 
         jPanel4.add(sEc, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 600, 330));
@@ -457,8 +455,8 @@ public class menu extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel logo_java;
     private javax.swing.JLabel panel_Exit;
-    private javax.swing.JLabel profe;
     private javax.swing.JPanel sEc;
     private javax.swing.JButton volverPresentacion;
     // End of variables declaration//GEN-END:variables
@@ -469,7 +467,7 @@ public class menu extends javax.swing.JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == chooseDeterminante1) {
-               profe.setVisible(false);
+               logo_java.setVisible(false);
                sis.cleanComponents();
                sis.setBounds(0,0,699,699);
                sEc.add(sis);
@@ -483,7 +481,7 @@ public class menu extends javax.swing.JFrame implements ActionListener {
              
         } else if (e.getSource() == chooseRaices1) {
             raiz.cleanValues();
-            profe.setVisible(false);
+            logo_java.setVisible(false);
             raiz.setBounds(0,0,699,699);
                sEc.add(raiz);
                validate();
@@ -493,7 +491,7 @@ public class menu extends javax.swing.JFrame implements ActionListener {
              fibonacci.setVisible(false);
              
         } else if (e.getSource() == chooseFibonachi1) {
-             profe.setVisible(false);
+             logo_java.setVisible(false);
                fibonacci.Clean();
                fibonacci.setBounds(0,0,699,699);
                sEc.add(fibonacci);
