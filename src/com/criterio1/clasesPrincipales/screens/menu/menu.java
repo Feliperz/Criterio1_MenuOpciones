@@ -268,15 +268,15 @@ public class menu extends javax.swing.JFrame implements ActionListener {
         sEcLayout.setHorizontalGroup(
             sEcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sEcLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(logo_java, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(511, Short.MAX_VALUE))
+                .addGap(17, 17, 17)
+                .addComponent(logo_java, javax.swing.GroupLayout.PREFERRED_SIZE, 647, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         sEcLayout.setVerticalGroup(
             sEcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sEcLayout.createSequentialGroup()
-                .addComponent(logo_java, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 267, Short.MAX_VALUE))
+                .addComponent(logo_java, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 12, Short.MAX_VALUE))
         );
 
         jPanel4.add(sEc, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 600, 330));
